@@ -1,4 +1,4 @@
-import React, {use, useEffect, useState} from "react";
+import  { useEffect, useState} from "react";
 import styles from './Main.module.css';
 import Header from "../../components/Header/Header";
 import VegetableList from "../../components/VegetableList/VegetableList";
@@ -6,35 +6,33 @@ import Modal from "../../Modal/Modal/Modal";
 import CartItem from "../../Modal/Modal/UI/CartItem";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchVegetables } from "../../features/vegetables/vegetablesSlice";
+import { Product } from "../../features/vegetables/vegetablesSlice";
+
 
 
 
 
 
 function Main () {
+    const dispatch = useDispatch();
+
+    const allProducts = useSelector((state: any) => state.vegetables.items);
+    const status = useSelector((state: any) => state.vegetables.status);
+    const error = useSelector((state: any) => state.vegetables.error);
 
     const [addedProductIds, setAddedProductIds] = useState<{ id: number; quantity: number }[]>([]);
     const [isModalOpen, setIsModalOpen] = useState(false);
 
-    useEffect(() => {
-        dispatchEvent(fetchVegetables())
-        // fetch('https://res.cloudinary.com/sivadass/raw/upload/v1535817394/json/products.json')
-        //     .then(res => {
-        //         if(!res.ok) throw new Error('Ошибка сети');
-        //         return res.json();
-        //     })
-        //     .then((data: Product[]) => {
-        //         setAllProducts(data);
-        //         setLoading(false);
-        //     })
-        //     .catch((err) => {
-        //         setError(err.message);
-        //         setLoading(false);
-        //     })
-    }, [])
+     
+    
 
-    if (loading) return <p>Загрузка...</p>
-    if (error) return <p>Ошибка: {error}</p>
+    useEffect(() => {
+        dispatch(fetchVegetables())
+    }, [dispatch])
+
+    if (status === 'loading') return <p>Загрузка...</p>
+    if (status === 'failed') return <p>Ошибка: {error}</p>
+
 
     const totalCount = addedProductIds.reduce((sum, item) => sum + item.quantity, 0);
 
