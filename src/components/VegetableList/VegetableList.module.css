@@ -1,0 +1,66 @@
+.vegetable {
+    padding: 60px 80px;
+    background-color: #E9ECEF;
+}
+
+.vegetable_title{
+    font-size: 32px;
+    margin-top: 60px;
+}
+
+.vegetable_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding-top: 49px;
+}
+
+.vegetable_card {
+    width: 302px;
+    height: 414px;
+    background-color: white;
+    border-radius: 24px;
+    padding: 16px;
+}
+
+.cartInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.cartInfoPrice {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.vegetable_image {
+    width: 276px;
+    border-radius: 24px;
+}
+
+.iconChetchick {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.btn_vegetable{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    width: 190px;
+    background-color: #E7FAEB;
+    color: #3B944E;
+    height: 44px;
+    font-size: 16px;
+    gap: 10px;
+}
+
+.cartIconCorzina {
+    width: 20px;
+}

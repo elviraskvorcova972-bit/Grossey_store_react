@@ -1,0 +1,23 @@
+.overlay {
+  position: fixed; /* фиксируем модалку поверх всего */
+  top: 71px;
+  right:20px;
+  width: 100vw; /* на всю ширину окна */
+  height: 100vh; /* на всю высоту окна */
+  display: flex;
+  justify-content: right;
+  align-items: start;
+  z-index: 1000; /* поверх всего */
+}
+
+.modalContent {
+  background-color: #fff; /* белый фон */
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 0 5px 0px gray;
+}

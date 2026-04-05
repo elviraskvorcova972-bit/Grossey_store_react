@@ -1,0 +1,28 @@
+.cartItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #DEE2E6;
+}
+
+.cartImage {
+    width: 75px;
+}
+
+.cartItemCal {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cartDetails {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.cartItemName {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}

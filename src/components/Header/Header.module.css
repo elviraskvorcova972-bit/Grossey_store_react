@@ -1,0 +1,39 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    padding: 7px 20px;
+    align-items: center;
+}
+
+.header__title {
+    font-size: 22px;
+}
+
+.header__title span {
+    background-color:#54B46A ;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-weight: lighter;
+}
+
+.btn__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: #54B46A;
+    padding: 12px 20px;
+    border-radius: 8px;
+    width: 144px;
+    height: 44px;
+
+}
+
+
+.cartIconCorzina {
+  margin-left: 8px;
+}
